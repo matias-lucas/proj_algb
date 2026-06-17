@@ -1,12 +1,12 @@
 #ifndef MENU_H
 #define MENU_H
 
-int menuInicial();
+void menuInicial();
 void escreverMenu1();
 
 void centralizador(int centro);
 
 void limparTela();
-void escreverLinha();
+void escreverLinha(int tam, int direcaoLinha);
 
 #endif

@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include "include/menu.h"
+#include "menu.h"
 
 #define larguraLinha 98
 
 int opcao = 0;
-int direcaoLinha = 0;
 char tituloMenuAtual[larguraLinha] = "SISTEMA ALGEBRA LINEAR";
 
 void limparTela(){
@@ -25,7 +25,8 @@ void escreverLinha(int tam, int direcaoLinha){
     if(direcaoLinha == 2) printf("\u255B\n");
 }
 
-void centralizador(int centro){
+void centralizador(int centro)
+{
     for (int i = 0; i < centro; i++)
     {
         printf(" ");
@@ -46,8 +47,7 @@ void titulo(char titulo[]){
     escreverLinha(larguraLinha, 1);
 }
 
-void escreverMenu1()
-{
+void escreverMenu1(){
     strcpy(tituloMenuAtual, "SISTEMA ALGEBRA LINEAR");
     titulo(tituloMenuAtual);
     printf("   1. Resolver um sistema linear\n");
@@ -60,7 +60,7 @@ void escreverMenu1()
     escreverLinha(larguraLinha, 2);
 }
 
-int menuInicial(){
+void menuInicial(){
     //do {
         if(opcao < 8) limparTela();
         escreverMenu1();
@@ -100,7 +100,6 @@ int menuInicial(){
                 limparTela();
                 strcpy(tituloMenuAtual, "SISTEMA ALGEBRA LINEAR - GERENCIAMENTO DE ARQUIVOS");
                 titulo(tituloMenuAtual);
-                printf("Gerenciando arquivos...\n");
                 // Chamar função para arquivos
                 break;
             case 7:
