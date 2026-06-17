@@ -8,5 +8,6 @@ void centralizador(int centro);
 
 void limparTela();
 void escreverLinha(int tam, int direcaoLinha);
+void titulo(char titulo[]);
 
 #endif
