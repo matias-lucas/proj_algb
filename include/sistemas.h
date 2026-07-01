@@ -10,6 +10,7 @@
     } Sistema;
     
     void lerSistema();
-    int parseSistema(Sistema *s);
+    void parseSistema(Sistema *sistema);
+    void imprimirSistema(Sistema *sistema);
 
 #endif
